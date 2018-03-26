@@ -1,16 +1,18 @@
 ---
 
-- name: Lab1 - Create a node
+- name: Lab1 - Create a vs
   hosts: all
   connection: local
   tasks:
-     - name: Create node using bigip_node module
-       bigip_node:
-          server: "{{ inventory_hostname }}"
+     - name: Create vs using bigip_virtual_server module
+        
+       bigip_virtual_server:
+          server: "{ inventory_hostname }}"
           user: admin
           password: admin
           validate_certs: no
-          address: "10.1.10.100"
-          name: "Server1"
+          name: "ansible_test"
+          destination: "192.168.5.10"
+          snat: "Automap"
+          port: "80"
        delegate_to: localhost
-
