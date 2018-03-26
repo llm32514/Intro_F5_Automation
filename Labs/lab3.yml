@@ -9,7 +9,7 @@
     user: admin
     password: admin
     servers:
-      - { name: Server1, address: "10.1.10.100", sessionState: "enabled", ephemeral: "true" }
+      - { name: Server1, address: "10.1.10.100", sessionState: "enabled",  }
       - { name: Server2, address: "10.1.10.101", sessionState: "disabled"  }
 
   tasks:
@@ -22,7 +22,6 @@
           validate_certs: no
           name: "{{ item.name }}"
           address: "{{ item.address }}"
-          ephemeral: "{{ item.ephemeral }}"
        delegate_to: localhost
        with_items: "{{ servers }}"
 
