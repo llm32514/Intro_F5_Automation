@@ -5,9 +5,8 @@
   connection: local
   tasks:
      - name: Create vs using bigip_virtual_server module
-        
        bigip_virtual_server:
-          server: "{ inventory_hostname }}"
+          server: "{{ inventory_hostname }}"
           user: admin
           password: admin
           validate_certs: no
