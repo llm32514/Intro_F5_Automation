@@ -7,7 +7,7 @@
 
   vars:
     user: admin
-    password: adminadmin
+    password: admin
     servers:
       - { name: Server1, address: "10.1.10.100", sessionState: "enabled" }
       - { name: Server2, address: "10.1.10.101", sessionState: "disabled"  }
