@@ -4,7 +4,7 @@
   connection: local
   vars:
    user: admin
-   password: adminadmin
+   password: admin
 
   tasks:
      - name: Delete node using bigip_node module
