@@ -22,6 +22,7 @@
           validate_certs: no
           name: "{{ item.name }}"
           address: "{{ item.address }}"
+          ephemeral: "{{ item.ephemeral }}"
        delegate_to: localhost
        with_items: "{{ servers }}"
 
