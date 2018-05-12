@@ -1,6 +1,6 @@
 
 
-name: Add virtual server
+- name: Add virtual server
   bigip_virtual_server:
     server: lb.mydomain.net
     user: admin
