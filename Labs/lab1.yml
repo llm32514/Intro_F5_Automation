@@ -11,6 +11,7 @@
           password: admin
           validate_certs: no
           name: "ansible_test"
+          partition: VA
           destination: "192.168.5.10"
           snat: "Automap"
           port: "80"
