@@ -1,10 +1,12 @@
+
+
 name: Add virtual server
   bigip_virtual_server:
     server: lb.mydomain.net
     user: admin
-    password: secret
+    password: admin
     state: present
-    partition: Common
+    partition: VA
     name: my-virtual-server
     destination: 10.10.10.10
     port: 443
