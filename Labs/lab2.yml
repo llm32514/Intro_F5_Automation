@@ -17,18 +17,6 @@
         pool: my-pool
         snat: Automap
         description: Test Virtual Server
-        profiles:
-          - http
-          - fix
-          - name: clientssl
-          context: server-side
-          - name: ilx
-          context: client-side
-        policies:
-          - my-ltm-policy-for-asm
-          - ltm-uri-policy
-          - ltm-policy-2
-          - ltm-policy-3
         enabled_vlans:
           - /Common/vlan2
       delegate_to: localhost
