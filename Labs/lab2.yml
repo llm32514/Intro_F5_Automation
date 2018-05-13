@@ -1,19 +1,30 @@
 ---
-- name: Lab2 - Delete a node using internal variables
-  hosts: all
-  connection: local
-  vars:
-   user: admin
-   password: admin
 
-  tasks:
-     - name: Delete node using bigip_node module
-       bigip_node:
-          server: "{{ inventory_hostname }}"
-          user: "{{ user }}"
-          password: "{{ password }}"
-          validate_certs: no
-          state: absent
-          name: "Server1"
-       delegate_to: localhost
-
+- name: Add virtual server
+  bigip_virtual_server:
+    server: lb.mydomain.net
+    user: admin
+    password: admin
+    state: present
+    partition: VA
+    name: my-virtual-server
+    destination: 10.10.10.10
+    port: 443
+    pool: my-pool
+    snat: Automap
+    description: Test Virtual Server
+    profiles:
+      - http
+      - fix
+      - name: clientssl
+        context: server-side
+      - name: ilx
+        context: client-side
+    policies:
+      - my-ltm-policy-for-asm
+      - ltm-uri-policy
+      - ltm-policy-2
+      - ltm-policy-3
+    enabled_vlans:
+      - /Common/vlan2
+  delegate_to: localhost
