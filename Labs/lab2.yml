@@ -5,7 +5,7 @@
   connection: local
   tasks:
     -name: Create VS using 2.5 modules
-      bigip_virtual_server:
+     bigip_virtual_server:
         server: lb.mydomain.net
         user: admin
         password: admin
