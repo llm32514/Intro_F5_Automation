@@ -24,8 +24,3 @@
           address: "{{ item.address }}"
        delegate_to: localhost
        with_items: "{{ servers }}"
-
-
-
-
----
