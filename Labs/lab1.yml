@@ -6,13 +6,13 @@
   tasks:
      - name: Create vs using bigip_virtual_server module
        bigip_virtual_server:
-          server: "{{ inventory_hostname }}"
+          server: {{ inventory_hostname }}
           user: admin
           password: admin
           validate_certs: no
-          name: "ansible_test"
+          name: ansible_test
           partition: VA
-          destination: "192.168.5.10"
-          snat: "Automap"
-          port: "80"
+          destination: 192.168.5.10
+          snat: Automap
+          port: 80
        delegate_to: localhost
