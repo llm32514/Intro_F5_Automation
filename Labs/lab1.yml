@@ -16,3 +16,10 @@
           snat: None
           port: 80
        delegate_to: localhost
+       
+      - name: Create pool
+        bigip_pool:
+          server: "{{ inventory_hostname }}"
+          validate_certs: no
+          name: red_pool
+       delegate_to: localhost
