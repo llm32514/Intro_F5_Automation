@@ -6,7 +6,7 @@
   tasks:
      - name: Create vs using bigip_virtual_server module
        bigip_virtual_server:
-          server: "va_vs"
+          server: "{{ inventory_hostname }}"
           user: admin
           password: admin
           validate_certs: no
