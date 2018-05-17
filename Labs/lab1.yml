@@ -16,7 +16,7 @@
           snat: None
           port: 80
        delegate_to: localhost
-       
+  tasks:      
       - name: Create pool
         bigip_pool:
           user: admin
