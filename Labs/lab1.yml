@@ -19,6 +19,8 @@
        
       - name: Create pool
         bigip_pool:
+          user: admin
+          password: admin
           server: "{{ inventory_hostname }}"
           validate_certs: no
           name: red_pool
