@@ -4,6 +4,15 @@
   hosts: all
   connection: local
   tasks:
+     - name: Create pool
+       bigip_pool:
+          server: "{{ inventory_hostname }}"
+          user: admin
+          password: admin
+          validate_certs: no
+          name: va_pool
+       delegate_to: localhost
+       
      - name: Create vs using bigip_virtual_server module
        bigip_virtual_server:
           server: "{{ inventory_hostname }}"
@@ -16,12 +25,4 @@
           snat: None
           port: 80
        delegate_to: localhost
-  tasks:      
-      - name: Create pool
-        bigip_pool:
-          user: admin
-          password: admin
-          server: "{{ inventory_hostname }}"
-          validate_certs: no
-          name: red_pool
-       delegate_to: localhost
+      
