@@ -11,5 +11,6 @@
           server: "{{ inventory_hostname }}"
           validate_certs: no
           src: cs_backup.ucs
+          dest: /tmp/cs_backup.ucs
        delegate_to: localhost
 
