@@ -3,7 +3,6 @@
 - name: Lab 3 - Create UCS backup
   hosts: all
   connection: local
-  gather_facts: no
 
   
   tasks:
