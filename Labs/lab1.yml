@@ -4,7 +4,7 @@
   hosts: all
   connection: local
   tasks:
-     - name: Create pool
+     - name: Create pool using bigip_pool module
        bigip_pool:
           server: "{{ inventory_hostname }}"
           user: admin
@@ -22,7 +22,8 @@
           name: ansible_test
           partition: VA
           destination: 192.168.5.10
-          snat: Automap
+          snat: Default
           port: 80
        delegate_to: localhost
       
+
