@@ -3,8 +3,6 @@
 - name: Lab 3 - Create UCS backup
   hosts: all
   connection: local
-
-  
   tasks:
      - name: Create UCS backup
        bigip_ucs_fetch:
