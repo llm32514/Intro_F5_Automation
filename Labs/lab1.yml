@@ -10,7 +10,7 @@
           user: admin
           password: admin
           validate_certs: no
-          name: va_pool
+          name: rhug_pool
        delegate_to: localhost
        
      - name: Create vs using bigip_virtual_server module
@@ -20,9 +20,9 @@
           password: admin
           validate_certs: no
           name: ansible_test
-          partition: VA
+          partition: RHUG
           destination: 192.168.5.10
-          snat: Default
+          snat: Automap
           port: 80
        delegate_to: localhost
       
