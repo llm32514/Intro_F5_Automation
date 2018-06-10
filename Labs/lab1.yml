@@ -11,6 +11,7 @@
           password: admin
           validate_certs: no
           name: rhug_pool
+          lb_method: observed-node
        delegate_to: localhost
        
      - name: Create vs using bigip_virtual_server module
