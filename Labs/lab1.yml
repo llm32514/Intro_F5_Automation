@@ -20,7 +20,7 @@
           user: admin
           password: admin
           validate_certs: no
-          name: ansible_test
+          name: ansible
           partition: RHUG
           destination: 192.168.5.10
           snat: Automap
