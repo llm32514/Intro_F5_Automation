@@ -5,13 +5,12 @@
   connection: local
   tasks:
      - name: Create UCS backup
-       bigip_ucs_fetch:
+       bigip_ucs:
           user: admin
           password: admin
-          backup: yes
           server: "{{ inventory_hostname }}"
           validate_certs: no
-          src: cs_backup.ucs
-          dest: /tmp/cs_backup.ucs
+          state: present
+          ucs: /root/bigip.localhost.localdomain.ucs
        delegate_to: localhost
 
