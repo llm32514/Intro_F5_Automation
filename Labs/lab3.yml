@@ -11,6 +11,6 @@
           server: "{{ inventory_hostname }}"
           validate_certs: no
           state: present
-          ucs: /root/bigip.localhost.localdomain.ucs
+          ucs: /tmp/bigip.localhost.localdomain.ucs
        delegate_to: localhost
 
