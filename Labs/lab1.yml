@@ -23,7 +23,7 @@
           name: ansible
           partition: RHUG
           destination: 192.168.5.10
-          snat: Automap
+          snat: None
           port: 80
        delegate_to: localhost
       
