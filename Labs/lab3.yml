@@ -8,6 +8,7 @@
        bigip_ucs_fetch:
           user: admin
           password: admin
+          backup: yes
           server: "{{ inventory_hostname }}"
           validate_certs: no
           src: cs_backup.ucs
