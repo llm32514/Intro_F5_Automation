@@ -10,7 +10,7 @@
           user: admin
           password: admin
           validate_certs: no
-          name: rhug_pool
+          name: navy_pool
           lb_method: observed-node
        delegate_to: localhost
        
@@ -21,7 +21,7 @@
           password: admin
           validate_certs: no
           name: ansible
-          partition: RHUG
+          partition: Navy
           destination: 192.168.5.10
           snat: None
           port: 80
