@@ -23,7 +23,7 @@
           name: ansible
           partition: NAVY
           destination: 192.168.5.10
-          snat: None
+          snat: Automap
           port: 80
        delegate_to: localhost
       
