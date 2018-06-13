@@ -21,7 +21,7 @@
           password: admin
           validate_certs: no
           name: ansible
-          partition: Navy
+          partition: NAVY
           destination: 192.168.5.10
           snat: None
           port: 80
