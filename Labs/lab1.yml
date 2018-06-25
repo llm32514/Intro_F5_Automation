@@ -10,7 +10,7 @@
           user: admin
           password: admin
           validate_certs: no
-          name: navy_pool
+          name: workshop_pool
           lb_method: observed-node
        delegate_to: localhost
        
@@ -21,9 +21,9 @@
           password: admin
           validate_certs: no
           name: ansible
-          partition: NAVY
+          partition: workshop
           destination: 192.168.5.10
-          snat: Automap
+          snat: None
           port: 80
        delegate_to: localhost
       
