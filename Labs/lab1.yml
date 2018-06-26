@@ -22,9 +22,10 @@
           validate_certs: no
           name: ansible
           partition: workshop
-          destination: 192.168.5.10
+          destination: 192.168.5.11
           snat: None
           port: 80
        delegate_to: localhost
+       
       
 
