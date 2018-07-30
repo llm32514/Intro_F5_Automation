@@ -11,7 +11,7 @@
           password: admin
           validate_certs: no
           name: workshop_pool
-          lb_method: observed-node
+          lb_method: ratio-member
        delegate_to: localhost
        
      - name: Create vs using bigip_virtual_server module
